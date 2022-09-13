@@ -41,14 +41,19 @@ long long iteration_fib(int n) //iteracja
 int main()
 {
 	int ile, Chose;
-	
+    SetConsoleTextAttribute(h0ut, FOREGROUND_BLUE);
 	cout << "Porownanie czasu wyznaczania liczby ciagu Fibonacciego; "; cout << "REKURENCJA I ITERACJA" << endl;
 
 	while (true)
 	{
 		while (true)
 		{
-			cout << "Ktora liczbe ciagu Fibonacciego chcesz wyznaczyc? | ";  cin >> ile;
+		    SetConsoleTextAttribute(h0ut, FOREGROUND_RED);
+		    cout << "(Powyzej 50 liczby czas wyznaczania jest bardzo duzy dla rekurencji, nie polecam)" << endl;
+		    SetConsoleTextAttribute(h0ut, FOREGROUND_RED | FOREGROUND_BLUE | FOREGROUND_GREEN);
+			cout << "Ktora liczbe ciagu Fibonacciego chcesz wyznaczyc? | ";
+			cin >> ile;
+
 			if (ile <= 0)
 			{
 				SetConsoleTextAttribute(h0ut, FOREGROUND_RED);
@@ -81,7 +86,7 @@ int main()
 		cout << endl;
 
 		cout << "1.Kontynuuj dzialanie programu" << endl;
-		cout << "2.Zakoncz dzialanie programu" << endl; 
+		cout << "2.Zakoncz dzialanie programu" << endl;
 		cout << "Twoj wybor: "; cin >> Chose;
 
 		if (Chose == 1)
@@ -91,7 +96,7 @@ int main()
 		}
 		else if (Chose == 2)
 			exit(0);
-		else 
+		else
 		{
 			while (true)
 			{
